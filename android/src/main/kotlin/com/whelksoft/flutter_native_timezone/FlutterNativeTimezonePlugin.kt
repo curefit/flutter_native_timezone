@@ -18,13 +18,13 @@ class FlutterNativeTimezonePlugin : FlutterPlugin, MethodCallHandler {
     private lateinit var channel: MethodChannel
 
     // backward compatibility with flutter api v1
-    companion object {
-        @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            val plugin = FlutterNativeTimezonePlugin()
-            plugin.setupMethodChannel(registrar.messenger())
-        }
-    }
+//    companion object {
+//        @JvmStatic
+//        fun registerWith(registrar: Registrar) {
+//            val plugin = FlutterNativeTimezonePlugin()
+//            plugin.setupMethodChannel(registrar.messenger())
+//        }
+//    }
 
     override fun onAttachedToEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
         setupMethodChannel(binding.binaryMessenger)
